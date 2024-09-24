@@ -44,6 +44,6 @@ jobs:
             https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables/PROD_NAME \
             -d "{\"name\": \"PROD_NAME\", \"value\": \"$STAGE_NAME\"}"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GitHub's built-in token
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}  # Use GitHub's built-in token
           STAGE_NAME: ${{ vars.STAGE_NAME }}
           PROD_NAME: ${{ vars.PROD_NAME }}
