@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Swap the environment variables using the GitHub API for Repository Variables
-#read-first-the-variables
+
+# Read the variables
 curl -L \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: Bearer $PAT_TOKEN" \
@@ -72,9 +73,7 @@ curl -L \
   https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables/STAGE_ALB \
   -d "{\"name\": \"STAGE_ALB\", \"value\": \"$PROD_ALB_VALUE\"}"
 
-
-
-# Read variables-after-updating
+# Read variables after updating
 curl -L \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: Bearer $PAT_TOKEN" \
