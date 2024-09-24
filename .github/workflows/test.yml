@@ -35,7 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Call script to swap repository variables
-        working-directory: frontend
         run: |
           curl -L \
             -X PATCH \
