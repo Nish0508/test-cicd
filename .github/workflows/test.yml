@@ -47,7 +47,7 @@ jobs:
 
       - name: Call script to swap repository variables
         run: |
-          chmod +x ../swap_script.sh
+          chmod +x ./swap_script.sh
           ./swap_script.sh
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }} 
