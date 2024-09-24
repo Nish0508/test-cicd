@@ -17,6 +17,7 @@ permissions:
   checks: write
   repository-projects: write
   security-events: write
+  packages: write
 
 
 
