@@ -39,7 +39,7 @@ jobs:
           curl -L \
             -X PATCH \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Authorization: Bearer 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" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables/PROD_NAME \
             -d "{\"name\": \"PROD_NAME\", \"value\": \"$STAGE_NAME\"}"
