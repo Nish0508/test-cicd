@@ -72,4 +72,4 @@ jobs:
             -d "{\"name\": \"STAGE_NAME\", \"value\": \"$PROD_VALUE\"}"
 
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
