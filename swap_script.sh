@@ -3,11 +3,11 @@
 # Swap the environment variables using the GitHub API for Repository Variables
 
 # Read the variables
-curl -L \
-  -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer $PAT_TOKEN" \
-  -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables
+# curl -L \
+#   -H "Accept: application/vnd.github+json" \
+#   -H "Authorization: Bearer $PAT_TOKEN" \
+#   -H "X-GitHub-Api-Version: 2022-11-28" \
+#   https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables
 
 # Get current values of PROD_BUCKET and STAGE_BUCKET
 PROD_BUCKET_VALUE=$(curl -L \
@@ -74,8 +74,8 @@ curl -L \
   -d "{\"name\": \"STAGE_ALB\", \"value\": \"$PROD_ALB_VALUE\"}"
 
 # Read variables after updating
-curl -L \
-  -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer $PAT_TOKEN" \
-  -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables
+# curl -L \
+#   -H "Accept: application/vnd.github+json" \
+#   -H "Authorization: Bearer $PAT_TOKEN" \
+#   -H "X-GitHub-Api-Version: 2022-11-28" \
+#   https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables
